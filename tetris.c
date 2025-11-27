@@ -8,9 +8,13 @@
 
 int main() {
 typedef struct {
-    char nome; // Tipo da peça ('I', 'O', 'T', 'L', etc.)
-    int id;    // Identificador único da peça (ordem de criação)
+    char nome; 
+    int id;    
 } Peca;
+
+#define TAMANHO_MAXIMO 5
+Peca fila[TAMANHO_MAXIMO];
+
     // 🧩 Nível Novato: Fila de Peças Futuras
     //
     // - Crie uma struct Peca com os campos: tipo (char) e id (int).
