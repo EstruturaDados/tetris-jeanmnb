@@ -101,7 +101,7 @@ int main() {
             re = (re + 1) % TAMANHO_MAXIMO;
         }
         
-        fila_pecas[re] = p;
+        fila[re] = p;
         printf("  [INIT] Peca %c com ID %d adicionada.\n", p.nome, p.id);
     }
 }
@@ -128,7 +128,7 @@ void enqueue() {
     }
 
     // Insere a peça na posição 're'
-    fila_pecas[re] = novaPeca;
+    fila[re] = novaPeca;
     printf("✅ ENQUEUE: Peca %c com ID %d inserida no final da fila.\n", novaPeca.nome, novaPeca.id);
 }
 
@@ -143,7 +143,7 @@ void dequeue() {
     }
 
     // A peça a ser jogada/removida está na posição 'frente'
-    Peca pecaRemovida = fila_pecas[frente];
+    Peca pecaRemovida = fila[frente];
     
     printf("🕹️ DEQUEUE: Peca jogada! Tipo %c, ID %d.\n", pecaRemovida.nome, pecaRemovida.id);
 
@@ -176,7 +176,7 @@ void visualizarFila() {
     int i = frente;
     do {
         // Exibe a informação da peça atual
-        printf("[%c %d]", fila_pecas[i].nome, fila_pecas[i].id);
+        printf("[%c %d]", fila[i].nome, fila[i].id);
         
         // Se a peça atual não for a última, adiciona um separador visual
         if (i != re) {
