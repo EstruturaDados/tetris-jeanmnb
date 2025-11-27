@@ -5,8 +5,6 @@
 // Tema 3 - Integração de Fila e Pilha
 // Este código inicial serve como base para o desenvolvimento do sistema de controle de peças.
 // Use as instruções de cada nível para desenvolver o desafio.
-
-int main() {
 typedef struct {
     char nome; 
     int id;    
@@ -14,6 +12,18 @@ typedef struct {
 
 #define TAMANHO_MAXIMO 5
 Peca fila[TAMANHO_MAXIMO];
+int frente = -1;
+int re = -1;
+int contador_id = 0;
+void inicializarFila();
+int estaVazia();
+int estaCheia();
+Peca gerarPeca();
+void enqueue();
+void dequeue();
+void visualizarFila();
+void exibirMenu();
+int main() {
 
     // 🧩 Nível Novato: Fila de Peças Futuras
     //
