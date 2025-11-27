@@ -1,12 +1,16 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 // Desafio Tetris Stack
 // Tema 3 - Integração de Fila e Pilha
 // Este código inicial serve como base para o desenvolvimento do sistema de controle de peças.
 // Use as instruções de cada nível para desenvolver o desafio.
 
 int main() {
-
+typedef struct {
+    char nome; // Tipo da peça ('I', 'O', 'T', 'L', etc.)
+    int id;    // Identificador único da peça (ordem de criação)
+} Peca;
     // 🧩 Nível Novato: Fila de Peças Futuras
     //
     // - Crie uma struct Peca com os campos: tipo (char) e id (int).
